@@ -19,7 +19,7 @@ jobs:
     runs-on: macos-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: dtolnay/rust-toolchain@stable
       - name: Disable audio
         # Disable audio through a patch. on github m1 runners, audio timeouts after 15 minutes
@@ -76,7 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Install Linux dependencies
         uses: ./.github/actions/install-linux-deps
       # At some point this may be merged into `install-linux-deps`, but for now it is its own step.
@@ -141,7 +141,7 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: dtolnay/rust-toolchain@stable
       - name: Run examples
         shell: bash
